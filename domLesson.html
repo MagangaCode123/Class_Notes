@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>I have been modified</h2>
+    <h2>Two</h2>
+    <h2>Three</h2>
+    <h2>Four</h2>
+    <h2>Five</h2>
+    <p>show me my paragrapk</p>
+    <p>Paragraph 2</p>
+    <div id="idOne">
+        <p class="one" id="textOne">I have an ID</p>
+        <p>And i am DIV 1</p>
+    </div>
+    <div id="idOne">
+        <p>I have same ID</p>
+        <p>And i am DIV 2</p>
+    </div>
+    <div>
+        <h1 id="textTwo">I am trying to get an attribute</h1>
+    </div>
+
+    <script>
+        let el = document.querySelector('p');
+        let elementID = document.getElementById('idOne')
+        let querySelectorAllVariables = document.querySelectorAll('h2')
+        let tagNames = document.getElementsByTagName('h2')
+        console.log('all elements------>',tagNames)
+
+        let querySelect = document.getElementById('textOne')
+        
+
+        const textOneAttribute = querySelect.getAttribute('id')
+        //**if user does sth change the button to red/change the background of a div
+
+        const textTwoElement = document.getElementById('textTwo')
+
+        textTwoElement.setAttribute('class', 'newClass')
+        textTwoElement.removeAttribute('class')
+
+        console.log('textTwoElement',textTwoElement)
+
+
+
+
+
+
+    </script>
+</body>
+</html>
