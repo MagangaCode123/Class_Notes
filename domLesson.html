@@ -33,10 +33,30 @@
         let tagNames = document.getElementsByTagName('h2')
         console.log('all elements------>',tagNames)
 
-        let querySelect = document.getElementById('textOne')
+        let querySelect = document.getElementById('textOne').innerHTML
+        //if the user is done with the superskill change inner html from not Complete to Complete
+        document.getElementById('textOne').innerHTML = 'I have been changed,wow'
+        console.log('query selector--->',querySelect)
+
+       
+
+        let createDiv = document.createElement('div')
+        var newContent = document.createTextNode('Hi, how are you doing?');
+
+
+        let text = '<p>Am i really there?<p>'
+
+        document.getElementById('textTwo').textContent = text
+
+        //  if(user is done with the superskill){
+         
+        //   return "<p>Skill Completed</p>"
+        //   }
+          
+          
         
 
-        const textOneAttribute = querySelect.getAttribute('id')
+        const textOneAttribute = querySelect.getAttribute('class')
         //**if user does sth change the button to red/change the background of a div
 
         const textTwoElement = document.getElementById('textTwo')
@@ -44,7 +64,33 @@
         textTwoElement.setAttribute('class', 'newClass')
         textTwoElement.removeAttribute('class')
 
+        textTwoElement.style.color = 'blue'
+
+
+
+        
         console.log('textTwoElement',textTwoElement)
+
+        const borderedDiv = document.getElementById('idOne')
+
+        borderedDiv.style.border = 'solid'
+        borderedDiv.style.padding = '8px 16px'
+
+  
+
+        let newDiv = document.createElement('div')
+
+        newDiv.setAttribute('class', 'div1')
+
+        let textParagraph = document.createTextNode('Hey,I am a new div!')
+        newDiv.appendChild(textParagraph)
+
+        document.body.appendChild(newDiv)
+
+
+        //innertext
+       
+        
 
 
 
