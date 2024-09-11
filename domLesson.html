@@ -25,8 +25,33 @@
     <div>
         <h1 id="textTwo">I am trying to get an attribute</h1>
     </div>
+    <div>
+        <button onclick="addOneToText()" >Add 1</button>
+        <p id="addText">0</p>
+    </div>
+
+    <!-- we use the form's onSubmit eventListener to prevent refresh of the page among other behaviours  -->
+
+    <form name="loginForm" onsubmit="return validateForm(event) ">
+        <label for="Name">Name/Email:</label>
+        <input type="text" name="name" placeholder="example@example.com" />
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="*********" />
+        <button type="submit">Login</button>
+        <button type="reset">cancel</button>
+      </form>
 
     <script>
+         function addOneToText(){
+            console.log('initial value',document.getElementById('addText').innerHTML)
+            console.log('changed value',document.getElementById('addText').innerHTML + 1)
+            let value = document.getElementById('addText').innerHTML
+            document.getElementById('addText').innerHTML = parseInt(value) + 1 
+            console.log('changed value',value + 1)
+
+       return value
+            
+        }
         let el = document.querySelector('p');
         let elementID = document.getElementById('idOne')
         let querySelectorAllVariables = document.querySelectorAll('h2')
@@ -89,9 +114,30 @@
 
 
         //innertext
+       const submitButton =  document.getElementById('submitButton')
+
+    //    submitButton.addEventListener('click', () =>{
+    //     //write your function
+    //    })
+
+    function validateForm(e) {
+ e.preventDefault()
+ console.log('our form---->',document.loginForm)
+
+
+
+
+
+ var name = document.loginForm.name.value
+ var password = document.loginForm.password.value
+if (name.length==0 ) //looking if the name is empty
+ return alert(`name is required`)
+if (password.length<5)
+ return alert(`password length should more than 5`)
+}
        
         
-
+   
 
 
 

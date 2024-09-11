@@ -63,7 +63,7 @@
 
 //appendChild adds children to parents
 
-
+//CHANGING TEXT INSIDE YOUR HTML CODE
 //while using innerHTML it ignores the markup tags
 
 //while using textContent and InnerText it includes the markup tags
