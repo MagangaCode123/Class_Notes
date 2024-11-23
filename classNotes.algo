@@ -1,0 +1,18 @@
+ALGORITHM whichever_name
+
+VAR
+num1,num2,num3 : INTEGER
+sum : INTEGER := 0
+
+string1 : STRING
+
+CONST 
+string2 : STRING := 'student';
+
+BEGIN
+    Read(num1);
+    Read(num2);
+    Read(num3);
+    sum := num1 + num2 + num3;
+    Write(sum);
+END
