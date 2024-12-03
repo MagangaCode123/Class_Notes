@@ -8,7 +8,12 @@
  * 
  * db.collectionName.find({<query>}) ----.this returns a document with the specified query
  * 
- 
+ * 
+ * db.collection.find({}) ----->returns every document in the collection
+ * 
+ * db.collection.findOne({grades: $gt:{50}) ------> returns the first document that matches the criteria
+ * 
+ * 
  * equal --> db.students.find({name:{$eq:'Murife'}})
  * greater than or equal to --> db.students.find({name:{$gt/$gte:'Murife'}})
  * lesser than or equal to --> db.students.find({name:{$lt/$lte:'Murife'}})
